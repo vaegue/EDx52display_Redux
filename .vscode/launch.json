@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Build and run",
+            "type": "shell",
+            "command": "go build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
             "name": "Debug EDDisplay",
             "type": "go",
             "request": "launch",

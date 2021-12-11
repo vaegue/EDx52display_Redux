@@ -21,9 +21,9 @@ func RefreshDisplay() {
 
 func renderLocationPage(page *mfd.Page) {
 	if state.Type == LocationPlanet || state.Type == LocationLanded {
-		renderEDSMBody(page, "#    Planet    #", state.Location.Body, state.Location.SystemAddress, state.BodyID)
+		renderEDSMBody(page, "P", state.Location.Body, state.Location.SystemAddress, state.BodyID)
 	} else {
-		renderEDSMSystem(page, "#    System    #", state.Location.StarSystem, state.Location.SystemAddress)
+		renderEDSMSystem(page, "S", state.Location.StarSystem, state.Location.SystemAddress)
 	}
 
 }
@@ -32,7 +32,7 @@ func renderFSDTarget(page *mfd.Page) {
 	if state.EDSMTarget.SystemAddress == 0 {
 		page.Add("No FSD Target")
 	} else {
-		renderEDSMSystem(page, "#  FSD Target  #", state.EDSMTarget.Name, state.EDSMTarget.SystemAddress)
+		renderEDSMSystem(page, "T", state.EDSMTarget.Name, state.EDSMTarget.SystemAddress)
 	}
 }
 
@@ -40,17 +40,16 @@ func renderEDSMSystem(page *mfd.Page, header, systemname string, systemaddress i
 	sysinfopromise := edsm.GetSystemBodies(systemaddress)
 	valueinfopromise := edsm.GetSystemValue(systemaddress)
 
-	page.Add(header)
-	page.Add(systemname)
-
 	sysinfo := <-sysinfopromise
+
+	sys := sysinfo.S
 
 	if sysinfo.Error != nil {
 		log.Println("Unable to fetch system information: ", sysinfo.Error)
 		page.Add("Sysinfo lookup error")
 		return
 	}
-	sys := sysinfo.S
+
 	if sys.ID64 == 0 {
 		page.Add("No EDSM data")
 		return
@@ -58,9 +57,9 @@ func renderEDSMSystem(page *mfd.Page, header, systemname string, systemaddress i
 
 	mainBody := sys.MainStar()
 	if mainBody.IsScoopable {
-		page.Add("Scoopable")
+		page.Add("%s S %s", header, systemname)
 	} else {
-		page.Add("Not scoopable")
+		page.Add("%s N %s", header, systemname)
 	}
 
 	page.Add(mainBody.SubType)

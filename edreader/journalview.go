@@ -57,19 +57,19 @@ func renderEDSMSystem(page *mfd.Page, header, systemname string, systemaddress i
 
 	mainBody := sys.MainStar()
 	if mainBody.IsScoopable {
-		page.Add("%s S %s", header, systemname)
+		page.Add("%s{ %s", header, systemname)
 	} else {
-		page.Add("%s N %s", header, systemname)
+		page.Add("%s- %s", header, systemname)
 	}
 
-	page.Add(mainBody.SubType)
+	// page.Add(mainBody.SubType)
 
-	page.Add("Bodies: %d", sys.BodyCount)
+	// page.Add("Bodies: %d", sys.BodyCount)
 
 	valinfo := <-valueinfopromise
 	if valinfo.Error == nil {
-		page.Add(printer.Sprintf("Scan:%11d", valinfo.S.EstimatedValue))
-		page.Add(printer.Sprintf("Map:%12d", valinfo.S.EstimatedValueMapped))
+		page.Add(printer.Sprintf("Scan:%11d Map:%12d", valinfo.S.EstimatedValue, valinfo.S.EstimatedValueMapped))
+		// page.Add(printer.Sprintf("Map:%12d", valinfo.S.EstimatedValueMapped))
 
 		if len(valinfo.S.ValuableBodies) > 0 {
 			page.Add("Valuable Bodies:")

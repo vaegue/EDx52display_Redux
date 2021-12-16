@@ -1,6 +1,6 @@
-# EDx52display
+# EDx52display Information Dense
 
-Reading Elite: Dangerous journal information and displaying on a Logitech X52 PRO MFD.
+Reading Elite: Dangerous journal information and displaying on a Logitech X52 PRO MFD in an more information dense way.
 
 Please note that this software only works with the X52 Pro. The regular X52 HOTAS does not support third-party software for the MFD.
 
@@ -23,7 +23,7 @@ Of particular note is:
 
 ### Page 1: Cargo hold
 
-This page will simply show the total used capacity and the contents of your cargo hold. This can be useful when mining, to check progress without having to go into the inventory panel.
+This page will simply show the total used capacity and the contents of your cargo hold. This can be useful when mining, to check progress without having to go into the inventory panel. This has received the most work from the original verion - it now shows the cargo capacity and total content count on the first row, followed by the cargo, all abbreviated down to 3 Characters. As I wanted this to be more useful to me when mining, I have added a * to the commodities that are valuable (This is set in the names/commodity CSV - by changing the name of the commodity, you can change this as desired from there). This change means you get information about 5 comodities on the first screen, and 6 as you scroll down.
 
 ### Page 2: Current location
 
@@ -39,12 +39,9 @@ This page will show system information about the system targeted for a FSD Jump
 
 A page with system information will have the following information, sourced from EDSM:
 
+- Whether the main star is scoopable  - This is indicated by a { for scoopable stars, and - for unscoopable stars
 - System Name
-- Whether the main star is scoopable
-- Number of bodies (as reported by EDSM)
-- Total value for scanning the system
-- Total value for mapping the entire system
-- Any valuable bodies
+- Total value for scanning the system and the Total value for mapping the entire system
 - System Prospecting information
   - Available elements, with number of planets landable where they occur
   - The planet in the system with the highest occurence of said element
@@ -86,6 +83,8 @@ uses a different location, you should update the conf.yaml file in the installat
   - trace
 
 ## Credits
+
+This project is forked from [peterbn/EDx52display](https://github.com/peterbn/EDx52display), and I have kept this readme credits in full from that project.
 
 This project owes a great deal to [Anthony Zaprzalka](https://github.com/AZaps) in terms of idea and execution
 and to [Jonathan Harris](https://github.com/Marginal) and the [EDMarketConnector](https://github.com/Marginal/EDMarketConnector) project

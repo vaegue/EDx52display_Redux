@@ -72,15 +72,23 @@ func handleCargoFile(file string) {
 }
 
 func renderCargo(page *mfd.Page, cargo Cargo) {
-	page.Add("#Cargo: %03d/%03d#", cargo.Count, ModulesInfoCargoCapacity())
+	var l = printer.Sprintf("%03d/%03d", cargo.Count, ModulesInfoCargoCapacity())
 	sort.Slice(cargo.Inventory, func(i, j int) bool {
 		a := cargo.Inventory[i]
 		b := cargo.Inventory[j]
 		return a.displayname() < b.displayname()
 	})
 
+	var n = 2
 	for _, line := range cargo.Inventory {
-		page.Add("%s: %d", line.displayname(), line.Count)
+		if n == 1 {
+			l = l + printer.Sprintf("%-4s%03d", line.displayname(), line.Count)
+			n = 2
+		} else if n == 2 {
+			page.Add("%s %-4s%03d", l, line.displayname(), line.Count)
+			n = 1
+			l = ""
+		}
 	}
 }
 

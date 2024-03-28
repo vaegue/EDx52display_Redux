@@ -1,3 +1,12 @@
+Forked from [hantyapp/Edx52displayDense](https://github.com/hantyapp/EDx52displayDense) which is a fork of [peterbn/EDx52display](https://github.com/peterbn/EDx52display)
+
+# Work In Progress
+Plan:
+- Merge later changes to original EDx52display project [peterbn/EDx52display](https://github.com/peterbn/EDx52display) for Odyssey.
+- flag/config to switch between Dense and Original display mode
+- Try to figure out why it activates the 'mode' switches on the joystick if you run it and the Saitek software at the same time.
+
+
 # EDx52display Information Dense
 
 Reading Elite: Dangerous journal information and displaying on a Logitech X52 PRO MFD in an more information dense way.

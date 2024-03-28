@@ -1,11 +1,14 @@
 Forked from [hantyapp/Edx52displayDense](https://github.com/hantyapp/EDx52displayDense) which is a fork of [peterbn/EDx52display](https://github.com/peterbn/EDx52display)
 
 # Work In Progress
+I don't know Go, so we'll see how this goes. Always a good time learning new things.
+
 Plan:
 - Merge later changes to original EDx52display project [peterbn/EDx52display](https://github.com/peterbn/EDx52display) for Odyssey.
 - flag/config to switch between Dense and Original display mode
 - Try to figure out why it activates the 'mode' switches on the joystick if you run it and the Saitek software at the same time.
-
+- See if I can solve issue #1 on [hantyapp/EDx52displayDense/](https://github.com/hantyapp/EDx52displayDense/issues/1)
+- *Maybe* look back into open issues on [peterbn/EDx52display](https://github.com/peterbn/EDx52display)
 
 # EDx52display Information Dense
 

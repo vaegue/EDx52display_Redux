@@ -1,4 +1,4 @@
-module github.com/peterbn/EDx52display
+module github.com/vaegue/EDx52display_Redux
 
 go 1.16
 

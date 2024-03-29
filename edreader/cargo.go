@@ -11,7 +11,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/peterbn/EDx52display/mfd"
+	"github.com/vaegue/EDx52display_Redux/mfd"
 )
 
 // FileCargo is the name of the processed Cargo file

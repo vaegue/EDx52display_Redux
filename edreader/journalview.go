@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/peterbn/EDx52display/edsm"
-	"github.com/peterbn/EDx52display/mfd"
+	"github.com/vaegue/EDx52display_Redux/edsm"
+	"github.com/vaegue/EDx52display_Redux/mfd"
 )
 
 // RefreshDisplay updates the display with the current state

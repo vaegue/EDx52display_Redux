@@ -7,10 +7,10 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/peterbn/EDx52display/conf"
-	"github.com/peterbn/EDx52display/edreader"
-	"github.com/peterbn/EDx52display/edsm"
-	"github.com/peterbn/EDx52display/mfd"
+	"github.com/vaegue/EDx52display_Redux/conf"
+	"github.com/vaegue/EDx52display_Redux/edreader"
+	"github.com/vaegue/EDx52display_Redux/edsm"
+	"github.com/vaegue/EDx52display_Redux/mfd"
 )
 
 // TextLogFormatter gives me custom command-line formatting

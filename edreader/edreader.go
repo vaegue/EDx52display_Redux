@@ -9,9 +9,9 @@ import (
 	log "github.com/sirupsen/logrus"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/peterbn/EDx52display/mfd"
+	"github.com/vaegue/EDx52display_Redux/mfd"
 
-	"github.com/peterbn/EDx52display/conf"
+	"github.com/vaegue/EDx52display_Redux/conf"
 )
 
 const DisplayPages = 3

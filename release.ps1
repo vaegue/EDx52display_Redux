@@ -9,4 +9,4 @@ go build
 
 Copy-Item -Path EDx52display.exe,conf.yaml,LICENSE,README.md,names,DepInclude -Destination .\EDx52Display -Recurse
 
-7z.exe a Release.zip .\EDx52Display
+Compress-Archive .\EDx52Display\* Release.zip

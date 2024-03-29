@@ -17,8 +17,8 @@ const (
 )
 
 const (
-	dllPath    = "./DepInclude/DirectOutput.dll"
-	pluginName = "EDX52Display"
+	dllPath    = "C:/Program Files/Logitech/DirectOutput/DirectOutput.dll"
+	pluginName = "EDX52Display_Redux"
 	context    = 0xCAFEBABE
 )
 

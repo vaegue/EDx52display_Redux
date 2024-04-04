@@ -5,6 +5,7 @@ I don't know Go, so we'll see how this goes. Always a good time learning new thi
 
 Plan:
 - ~~Merge later changes to original EDx52display project [peterbn/EDx52display](https://github.com/peterbn/EDx52display) for Odyssey.~~
+- Make a more dense mode (maybe one page with no scrolling for at-a-glance info)
 - flag/config to switch between Dense and Original display mode
 - Try to figure out why the 'mode' switches on the joystick when you turn the left wheel while the Saitek software is running, which seems to cause everything to flicker. Downgrading the software to "8.0.132.0" seems to help with the flickering, but still fires off whatever the 'mode' switch is bound to.
 - See if I can solve issue #1 on [hantyapp/EDx52displayDense/](https://github.com/hantyapp/EDx52displayDense/issues/1)

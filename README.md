@@ -2,6 +2,7 @@ Forked from [hantyapp/Edx52displayDense](https://github.com/hantyapp/EDx52displa
 
 # Work In Progress
 I don't know Go, so we'll see how this goes. Always a good time learning new things.
+Branches other than 'master' may not work. Master branch should always be functional.
 
 Plan:
 - ~~Merge later changes to original EDx52display project [peterbn/EDx52display](https://github.com/peterbn/EDx52display) for Odyssey.~~

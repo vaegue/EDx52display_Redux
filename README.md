@@ -1,6 +1,6 @@
 Forked from [hantyapp/Edx52displayDense](https://github.com/hantyapp/EDx52displayDense) which is a fork of [peterbn/EDx52display](https://github.com/peterbn/EDx52display)
 
-# Work In Progress
+# ABANDONED - I NO LONGER HAVE OR USE THIS HOTAS
 I don't know Go, so we'll see how this goes. Always a good time learning new things.
 Branches other than 'master' may not work. Master branch should always be functional.
 
